@@ -50,9 +50,17 @@ run with configure dataset and backbone model  default epoch is `400`
 ```
 python NoProp/src/noprop_simple.py --dataset cifar100 --backbone resnet152
 ```
- 
 
-![log](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/continuous_CIFAR-100.png)
+## log 
+you can compare the log and figure in paper
+[log of train/eval for mnist](logs/log_mnist.md)
+![log_mnist](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/continuous_MNIST.png)
+
+[log of train/eval for mnist](logs/log_cifar10.md) 
+ ![log_cifar10](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/continuous_CIFAR-10.png)
+
+[log of train/eval for mnist](logs/log_cifar100.md) 
+![log_cifar100](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/continuous_CIFAR-100.png)
 
 - Figure 3:Test accuracies (%) plotted against cumulative training time (in seconds) for models using one-hot label embedding in the continuous-time setting. All models within each plot were trained on the same type of GPU to ensure a fair comparison. NoProp-CT achieves strong performance in terms of both accuracy and speed compared to adjoint sensitivity. For CIFAR-100, NoProp-FM does not learn effectively with one-hot label embedding.
 
@@ -79,6 +87,4 @@ python NoProp/src/noprop_simple.py --dataset cifar100 --backbone resnet152
 }
 ```
 
-## log 
-[train/eval for mnist](log01.md)
- 
+
