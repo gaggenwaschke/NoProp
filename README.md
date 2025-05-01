@@ -30,6 +30,24 @@ for more detail, check the original paper [arXiv:2503.24322v1](https://arxiv.org
   - Automatic Heun integration with T=40 evaluation at the end of every epoch.
   - Post-training evaluation across customizable T values (e.g., [2,5,10,20,40,60,100]).
   - Benchmarks: Pre-configured for MNIST. you can easily evaluate for CIFAR-10, and CIFAR-100.
+## Usage 
+
+#### Quick Start 
+
+copy the code
+```
+git clone https://github.com/yhgon/NoProp.git
+```
+
+run with default option for mnist dataset
+```
+python NoProp/src/nopropct_mnist.py
+```
+
+run with configure dataset and backbone model 
+```
+python NoProp/src/noprop_simple.py --dataset cifar10 --backbone resnet50
+```
 
 ## Citation 
 ```
