@@ -57,7 +57,7 @@ you can compare the log and figure in paper
 
 ![log_mnist](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/continuous_MNIST.png)
 
-- [log of train/eval for cifar10](logs/log_cifar10.md) 
+- [log of train/eval for cifar10](logs/log_cifar10.md)
 
  ![log_cifar10](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/continuous_CIFAR-10.png)
 
