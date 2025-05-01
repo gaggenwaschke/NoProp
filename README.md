@@ -5,15 +5,14 @@ It's an unofficial community-driven implementation of the NoProp method describe
 
 ## Overview
 
-NoProp is a novel approach for training neural networks without relying on standard back-propagation or forward-propagation steps. This repository provides:
- - Discrete-Time (DT) and Continuous-Time (CT) implementations.
- - Support for benchmark image classification tasks (MNIST, CIFAR-10, CIFAR-100).
- - Scripts for training, evaluation, and visualization of results.
-
+NoProp is a novel approach for training neural networks without relying on standard back-propagation or forward-propagation steps inspiration from diffusion and flow matching methods. 
+This repository provides:
+ - Continuous-Time (CT) implementations.
+ - Support for benchmark image classification tasks (MNIST, CIFAR-10, CIFAR-100) 
+ 
 ![Architecture](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/Noprop_clear.png)
 
 - Figure 1:Architecture of NoProp. $z_0$ represents Gaussian noise, while $z_1,…,z_T$ are successive transformations of $z_0$ through the learned dynamics $u_1,…,u_T$, with each layer conditioned on the image $x$, ultimately producing the class prediction $\hat{y}$.
-
 
 for more detail, check the original paper [arXiv:2503.24322v1](https://arxiv.org/html/2503.24322v1)
 
@@ -27,8 +26,17 @@ for more detail, check the original paper [arXiv:2503.24322v1](https://arxiv.org
   - Automatic Heun integration with T=40 evaluation at the end of every epoch.
   - Post-training evaluation across customizable T values (e.g., [2,5,10,20,40,60,100]).
   - Benchmarks: Pre-configured for MNIST. you can easily evaluate for CIFAR-10, and CIFAR-100.
-## Usage 
 
+### NoProp-CT 
+
+ ![CT](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/model2.png)
+ 
+Figure 6:Models used for training when the class embedding dimension is different from the image dimension. Right: model for the continuous-time case. conv: convolutional layer. FC: fully connected layer (number in parentheses indicates units). concat: concatenation. pos emb: positional embedding (number in parentheses indicates time embedding dimension). When the class embedding dimension matches the image dimension, the noised label and the image are processed in the same way before concatenation in each model. Note that batch normalization is not included in the continuous-time model.
+
+current implementation  is slightly different. We leverage predefined ResNet Model instead of manual model. 
+ 
+## Usage 
+ 
 #### Quick Start 
 
 copy the code
