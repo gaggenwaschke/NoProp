@@ -281,7 +281,7 @@ def train_and_eval(backbone: str, dataset: str, data_root: str):
     model = NoPropCT(backbone, num_classes=num_classes, time_emb_dim=64, embed_dim=256).to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-3)
 
-    for ep in range(1, 101):
+    for ep in range(1, 401):
         t0, total_loss = time.time(), 0.0
         model.train()
         for x,y in tr_loader:
@@ -308,7 +308,7 @@ def train_and_eval(backbone: str, dataset: str, data_root: str):
     for T in [2,5,10,20,30,40,50,60,70,80,90,100,200]:
         ti = time.time()
         corr = tot = 0
-        for x, y in te:
+        for x, y in te_loader:
             x, y = x.to(device), y.to(device)
             preds = run_noprop_ct_inference_heun(model, x, T)
             corr += (preds == y).sum().item(); tot += y.size(0)
@@ -319,7 +319,7 @@ def train_and_eval(backbone: str, dataset: str, data_root: str):
     for T in [2,5,10,20,30,40,50,60,70,80,90,100,200]:
         ti = time.time()
         corr = tot = 0
-        for x, y in te:
+        for x, y in te_loader:
             x, y = x.to(device), y.to(device)
             preds = run_noprop_ct_inference(model, x, T)
             corr += (preds == y).sum().item(); tot += y.size(0)
