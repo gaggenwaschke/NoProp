@@ -184,7 +184,7 @@ def train_step(model, x, y, optimizer, device, η: float = 1.0) -> float:
 def run_noprop_ct_inference(model: nn.Module, x: torch.Tensor, T_steps: int = 1000) -> torch.Tensor:
     model.eval()
     B = x.size(0)
-    m = model.fuse[-1].out_features
+    m = model.fuse.out_features
     dt = 1.0 / T_steps
     z = torch.randn(B, m, device=x.device)
     for i in range(T_steps):
