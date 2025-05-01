@@ -61,15 +61,15 @@ python NoProp/src/noprop_simple.py --dataset cifar100 --backbone resnet152
 
 ## log 
 you can compare the log and figure in paper
-- [log of train/eval for mnist](logs/log_mnist.md)
+- [log of train/eval for mnist](logs/log_mnist.md) 200 epoch
 
 ![log_mnist](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/continuous_MNIST.png)
 
-- [log of train/eval for cifar10](logs/log_cifar10.md)
+- [log of train/eval for cifar10](logs/log_cifar10.md) 400 epoch
 
  ![log_cifar10](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/continuous_CIFAR-10.png)
 
-- [log of train/eval for cifar100](logs/log_cifar100.md) 
+- [log of train/eval for cifar100](logs/log_cifar100.md) 2000 epoch
 
 ![log_cifar100](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/continuous_CIFAR-100.png)
 
