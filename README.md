@@ -1,4 +1,6 @@
 # NoProp
+Hyungon Ryu | NVAITC Korea
+
 implement of NoProp-CT [arXiv:2503.24322v1](https://arxiv.org/html/2503.24322v1)
 
 ## modification 
