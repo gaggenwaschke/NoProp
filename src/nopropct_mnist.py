@@ -176,6 +176,9 @@ def run_noprop_ct_inference(model: nn.Module, x: torch.Tensor, T_steps: int = 10
         z = z + dt * (p - z) / (1 - αb)
     return z.argmax(dim=1)
 
+# ----------------------------------------------------------------------------
+# inference routines with heun
+# ----------------------------------------------------------------------------
 @torch.no_grad()
 def run_noprop_ct_inference_heun(model: nn.Module, x: torch.Tensor, T_steps: int = 40) -> torch.Tensor:
     model.eval()
@@ -275,5 +278,5 @@ def train_and_eval(backbone: str):
     torch.cuda.empty_cache(); gc.collect()
 
 if __name__ == '__main__':
-    for bb in ['resnet18', 'resnet50', 'resnet152']:
-        train_and_eval(bb)
+    for backbone in ['resnet18', 'resnet50', 'resnet152']:
+        train_and_eval(backbone)
