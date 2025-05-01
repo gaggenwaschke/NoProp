@@ -21,6 +21,7 @@ NoProp is a novel approach for training neural networks without relying on stand
 for more detail, check the original paper [arXiv:2503.24322v1](https://arxiv.org/html/2503.24322v1)
 
 ## implementation  
+- Modular Design: Easily extend and investigate NoProp with different model architectures and datasets.
 - Modular Backbone Design: Easily configure ResNet-18, ResNet-50, or ResNet-152 backbones.
 - Time & Temperature Headers: Embed time-step (Zt) and noise parameter (T), then fuse with feature header for classification.
 - Scheduler Options: Support both Euler and Heun integration schemes for diffusion timesteps.
