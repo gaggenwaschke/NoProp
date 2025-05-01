@@ -14,9 +14,6 @@ NoProp is a novel approach for training neural networks without relying on stand
 
 - Figure 1:Architecture of NoProp. $z_0$ represents Gaussian noise, while $z_1,…,z_T$ are successive transformations of $z_0$ through the learned dynamics $u_1,…,u_T$, with each layer conditioned on the image $x$, ultimately producing the class prediction $\hat{y}$.
 
-![log](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/continuous_CIFAR-100.png)
-
-- Figure 3:Test accuracies (%) plotted against cumulative training time (in seconds) for models using one-hot label embedding in the continuous-time setting. All models within each plot were trained on the same type of GPU to ensure a fair comparison. NoProp-CT achieves strong performance in terms of both accuracy and speed compared to adjoint sensitivity. For CIFAR-100, NoProp-FM does not learn effectively with one-hot label embedding.
 
 for more detail, check the original paper [arXiv:2503.24322v1](https://arxiv.org/html/2503.24322v1)
 
@@ -48,6 +45,18 @@ run with configure dataset and backbone model
 ```
 python NoProp/src/noprop_simple.py --dataset cifar10 --backbone resnet50
 ```
+
+run with configure dataset and backbone model  default epoch is `400`
+```
+python NoProp/src/noprop_simple.py --dataset cifar100 --backbone resnet152
+```
+ 
+
+![log](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/continuous_CIFAR-100.png)
+
+- Figure 3:Test accuracies (%) plotted against cumulative training time (in seconds) for models using one-hot label embedding in the continuous-time setting. All models within each plot were trained on the same type of GPU to ensure a fair comparison. NoProp-CT achieves strong performance in terms of both accuracy and speed compared to adjoint sensitivity. For CIFAR-100, NoProp-FM does not learn effectively with one-hot label embedding.
+
+
 
 ## Citation 
 ```
