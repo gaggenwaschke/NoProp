@@ -275,13 +275,13 @@ def train_and_eval(backbone: str, dataset: str, data_root: str):
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     print(f"\n--- {backbone} on {dataset.upper()} ({num_classes} classes) using {device} ---")
 
-    tr_loader = DataLoader(ds_train, batch_size=512, shuffle=True,  num_workers=8, drop_last=True)
-    te_loader = DataLoader(ds_test,  batch_size=512, shuffle=False, num_workers=8)
+    tr_loader = DataLoader(ds_train, batch_size=2048, shuffle=True,  num_workers=8, drop_last=True)
+    te_loader = DataLoader(ds_test,  batch_size=2048, shuffle=False, num_workers=8)
 
     model = NoPropCT(backbone, num_classes=num_classes, time_emb_dim=64, embed_dim=256).to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-3)
 
-    for ep in range(1, 401):
+    for ep in range(1, 2001):
         t0, total_loss = time.time(), 0.0
         model.train()
         for x,y in tr_loader:
