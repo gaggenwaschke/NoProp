@@ -1,7 +1,14 @@
-# NoProp
-Hyungon Ryu | NVAITC Korea
+# NoProp: Community Implementation
+Hyungon Ryu | Sr. Solution Architect | NVIDIA AI Technology Center Korea
 
-implement of NoProp-CT [arXiv:2503.24322v1](https://arxiv.org/html/2503.24322v1)
+A community-driven reference implementation of the NoProp method described in Li et al., "NoProp: Training Neural Networks without Back-propagation or Forward-propagation" [arXiv:2503.24322v1](https://arxiv.org/html/2503.24322v1)
+
+## Overview
+
+NoProp is a novel approach for training neural networks without relying on standard back-propagation or forward-propagation steps. This repository provides:
+ - Discrete-Time (DT) and Continuous-Time (CT) implementations.
+ - Support for benchmark image classification tasks (MNIST, CIFAR-10, CIFAR-100).
+ - Scripts for training, evaluation, and visualization of results.
 
 ![Architecture](https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/Noprop_clear.png)
 
@@ -11,14 +18,38 @@ implement of NoProp-CT [arXiv:2503.24322v1](https://arxiv.org/html/2503.24322v1)
 
 - Figure 3:Test accuracies (%) plotted against cumulative training time (in seconds) for models using one-hot label embedding in the continuous-time setting. All models within each plot were trained on the same type of GPU to ensure a fair comparison. NoProp-CT achieves strong performance in terms of both accuracy and speed compared to adjoint sensitivity. For CIFAR-100, NoProp-FM does not learn effectively with one-hot label embedding.
 
+for more detail, check the original paper [arXiv:2503.24322v1](https://arxiv.org/html/2503.24322v1)
 
 ## implementation  
-- modular design for backbone 
-- configure backbone network with ResNet-18,50,152
-- add Zt, T and fused header for cls
-- scheduler with euler and heun
-- evaluate accuracy with heun T=40 for every epoch
-- evaluate various T after finish train
+- Modular Backbone Design: Easily configure ResNet-18, ResNet-50, or ResNet-152 backbones.
+- Time & Temperature Headers: Embed time-step (Zt) and noise parameter (T), then fuse with feature header for classification.
+- Scheduler Options: Support both Euler and Heun integration schemes for diffusion timesteps.
+- Evaluation Hooks:
+  - Automatic Heun integration with T=40 evaluation at the end of every epoch.
+  - Post-training evaluation across customizable T values (e.g., [2,5,10,20,40,60,100]).
+  - Benchmarks: Pre-configured for MNIST. you can easily evaluate for CIFAR-10, and CIFAR-100.
+
+## Citation 
+```
+@misc{li2025noprop,
+  title={NoProp: Training Neural Networks without Back-propagation or Forward-propagation},
+  author={Li, Qinyu and Teh, Yee Whye and Pascanu, Razvan},
+  year={2025},
+  eprint={2503.24322v1},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG}
+}
+```
+
+```
+@misc{ryu2025nopropcode,
+  title={NoProp: Community Implementation Code},
+  author={Ryu, Hyungon},
+  year={2025},
+  howpublished={\url{https://github.com/yhgon/NoProp}},
+  note={Commit XYZ}
+}
+```
 
 ## log 
 [train/eval for mnist](log01.md)
