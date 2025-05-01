@@ -27,6 +27,8 @@ for more detail, check the original paper [arXiv:2503.24322v1](https://arxiv.org
   - Post-training evaluation across customizable T values (e.g., [2,5,10,20,40,60,100]).
   - Benchmarks: Pre-configured for MNIST. you can easily evaluate for CIFAR-10, and CIFAR-100.
 
+during investigation, I'm change the implementations to improve the accuracy for cifar10 and cifar100 cases
+
 ### NoProp-CT 
 
  <img src="https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/model2.png" width=300>
