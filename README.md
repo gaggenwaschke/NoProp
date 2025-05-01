@@ -31,7 +31,7 @@ for more detail, check the original paper [arXiv:2503.24322v1](https://arxiv.org
 
  <img src="https://arxiv.org/html/2503.24322v1/extracted/6324620/plots/model2.png" width=300>
  
-Figure 6:Models used for training when the class embedding dimension is different from the image dimension. Right: model for the continuous-time case. conv: convolutional layer. FC: fully connected layer (number in parentheses indicates units). concat: concatenation. pos emb: positional embedding (number in parentheses indicates time embedding dimension). When the class embedding dimension matches the image dimension, the noised label and the image are processed in the same way before concatenation in each model. Note that batch normalization is not included in the continuous-time model.
+Figure 6:Models used for training when the class embedding dimension is different from the image dimension. Left: model for the discrete-time case. Right: model for the continuous-time case. conv: convolutional layer. FC: fully connected layer (number in parentheses indicates units). concat: concatenation. pos emb: positional embedding (number in parentheses indicates time embedding dimension). When the class embedding dimension matches the image dimension, the noised label and the image are processed in the same way before concatenation in each model. Note that batch normalization is not included in the continuous-time model.
 
 current implementation  is slightly different. We leverage predefined ResNet Model instead of manual model. 
  
