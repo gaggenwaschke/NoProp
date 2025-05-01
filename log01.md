@@ -488,4 +488,224 @@ Epoch 07 loss 2.2774 | train 14.2s
 Epoch 08 loss 1.8115 | train 14.2s
 Epoch 09 loss 1.7307 | train 14.1s
 Epoch 10 loss 1.6261 | train 14.1s | Acc 69.24% | infer 55.9s
+Epoch 11 loss 1.4224 | train 14.1s
+Epoch 12 loss 1.2309 | train 14.2s
+Epoch 13 loss 1.1754 | train 14.1s
+Epoch 14 loss 1.0957 | train 14.2s
+Epoch 15 loss 1.0189 | train 14.2s | Acc 87.91% | infer 55.9s
+Epoch 16 loss 0.9640 | train 14.1s
+Epoch 17 loss 0.9663 | train 14.1s
+Epoch 18 loss 0.8952 | train 14.2s
+Epoch 19 loss 0.8251 | train 14.1s
+Epoch 20 loss 0.8145 | train 14.2s | Acc 91.66% | infer 56.1s
+Epoch 21 loss 0.7862 | train 14.3s
+Epoch 22 loss 0.7729 | train 14.2s
+Epoch 23 loss 0.7388 | train 14.1s
+Epoch 24 loss 0.6698 | train 14.1s
+Epoch 25 loss 0.6563 | train 14.1s | Acc 92.40% | infer 56.2s
+Epoch 26 loss 0.6922 | train 14.1s
+Epoch 27 loss 0.6721 | train 14.2s
+Epoch 28 loss 0.6514 | train 14.2s
+Epoch 29 loss 0.6326 | train 14.2s
+Epoch 30 loss 0.6714 | train 14.1s | Acc 92.32% | infer 56.0s
+Epoch 31 loss 0.6579 | train 14.1s
+Epoch 32 loss 0.6463 | train 14.1s
+Epoch 33 loss 0.6262 | train 14.2s
+Epoch 34 loss 0.6043 | train 14.1s
+Epoch 35 loss 0.5917 | train 14.2s | Acc 95.79% | infer 56.2s
+Epoch 36 loss 0.5803 | train 14.1s
+Epoch 37 loss 0.5699 | train 14.1s
+Epoch 38 loss 0.5533 | train 14.2s
+Epoch 39 loss 0.5411 | train 14.2s
+Epoch 40 loss 0.5470 | train 14.1s | Acc 95.91% | infer 56.2s
+Epoch 41 loss 0.5534 | train 14.1s
+Epoch 42 loss 0.5386 | train 14.1s
+Epoch 43 loss 0.5704 | train 14.1s
+Epoch 44 loss 0.5666 | train 14.1s
+Epoch 45 loss 0.5427 | train 14.1s | Acc 96.57% | infer 56.0s
+Epoch 46 loss 0.5595 | train 14.1s
+Epoch 47 loss 0.5437 | train 14.2s
+Epoch 48 loss 0.5272 | train 14.2s
+Epoch 49 loss 0.5246 | train 14.1s
+Epoch 50 loss 0.5293 | train 14.2s | Acc 96.56% | infer 56.0s
+Epoch 51 loss 0.5215 | train 14.1s
+Epoch 52 loss 0.5169 | train 14.1s
+Epoch 53 loss 0.5222 | train 14.1s
+Epoch 54 loss 0.5308 | train 14.2s
+Epoch 55 loss 0.5244 | train 14.1s | Acc 96.91% | infer 56.0s
+Epoch 56 loss 0.5270 | train 14.1s
+Epoch 57 loss 0.5320 | train 14.2s
+Epoch 58 loss 0.5360 | train 14.2s
+Epoch 59 loss 0.5174 | train 14.1s
+Epoch 60 loss 0.5262 | train 14.1s | Acc 96.55% | infer 56.0s
+Epoch 61 loss 0.5398 | train 14.1s
+Epoch 62 loss 0.5929 | train 14.1s
+Epoch 63 loss 0.6559 | train 14.1s
+Epoch 64 loss 0.6734 | train 14.1s
+Epoch 65 loss 0.5761 | train 14.2s | Acc 96.44% | infer 56.2s
+Epoch 66 loss 0.6113 | train 14.1s
+Epoch 67 loss 0.5879 | train 14.2s
+Epoch 68 loss 0.5662 | train 14.1s
+Epoch 69 loss 0.7902 | train 14.1s
+Epoch 70 loss 0.7504 | train 14.2s | Acc 95.46% | infer 56.2s
+Epoch 71 loss 0.8568 | train 14.1s
+Epoch 72 loss 0.6913 | train 14.3s
+Epoch 73 loss 0.7691 | train 14.1s
+Epoch 74 loss 0.7385 | train 14.1s
+Epoch 75 loss 0.6912 | train 14.2s | Acc 95.94% | infer 56.0s
+Epoch 76 loss 0.5987 | train 14.1s
+Epoch 77 loss 0.6134 | train 14.2s
+Epoch 78 loss 0.5770 | train 14.1s
+Epoch 79 loss 0.5793 | train 14.1s
+Epoch 80 loss 0.5729 | train 14.1s | Acc 97.22% | infer 56.2s
+Epoch 81 loss 0.5306 | train 14.2s
+Epoch 82 loss 0.5243 | train 14.1s
+Epoch 83 loss 0.5164 | train 14.1s
+Epoch 84 loss 0.5137 | train 14.1s
+Epoch 85 loss 0.5116 | train 14.2s | Acc 97.88% | infer 56.1s
+Epoch 86 loss 0.5084 | train 14.1s
+Epoch 87 loss 0.5051 | train 14.1s
+Epoch 88 loss 0.5096 | train 14.1s
+Epoch 89 loss 0.5097 | train 14.1s
+Epoch 90 loss 0.5186 | train 14.1s | Acc 97.55% | infer 56.2s
+Epoch 91 loss 0.5075 | train 14.1s
+Epoch 92 loss 0.5039 | train 14.1s
+Epoch 93 loss 0.5042 | train 14.1s
+Epoch 94 loss 0.5047 | train 14.1s
+Epoch 95 loss 0.5005 | train 14.2s | Acc 97.99% | infer 56.2s
+Epoch 96 loss 0.5002 | train 14.2s
+Epoch 97 loss 0.4974 | train 14.1s
+Epoch 98 loss 0.4966 | train 14.1s
+Epoch 99 loss 0.4970 | train 14.2s
+Epoch 100 loss 0.5072 | train 14.1s | Acc 97.82% | infer 56.2s
+Epoch 101 loss 0.5008 | train 14.1s
+Epoch 102 loss 0.4993 | train 14.1s
+Epoch 103 loss 0.6275 | train 14.1s
+Epoch 104 loss 0.5965 | train 14.1s
+Epoch 105 loss 0.5715 | train 14.2s | Acc 97.47% | infer 55.9s
+Epoch 106 loss 0.5439 | train 14.2s
+Epoch 107 loss 0.5862 | train 14.1s
+Epoch 108 loss 0.6406 | train 14.1s
+Epoch 109 loss 0.6190 | train 14.1s
+Epoch 110 loss 0.5779 | train 14.2s | Acc 97.22% | infer 56.0s
+Epoch 111 loss 0.5711 | train 14.2s
+Epoch 112 loss 0.5411 | train 14.1s
+Epoch 113 loss 0.5276 | train 14.2s
+Epoch 114 loss 0.5213 | train 14.2s
+Epoch 115 loss 0.5115 | train 14.1s | Acc 98.10% | infer 56.2s
+Epoch 116 loss 0.5224 | train 14.2s
+Epoch 117 loss 0.5183 | train 14.1s
+Epoch 118 loss 0.5132 | train 14.1s
+Epoch 119 loss 0.5802 | train 14.1s
+Epoch 120 loss 0.5622 | train 14.1s | Acc 97.62% | infer 56.2s
+Epoch 121 loss 0.5422 | train 14.1s
+Epoch 122 loss 0.5351 | train 14.1s
+Epoch 123 loss 0.5268 | train 14.3s
+Epoch 124 loss 0.5340 | train 14.1s
+Epoch 125 loss 0.5130 | train 14.1s | Acc 98.11% | infer 56.2s
+Epoch 126 loss 0.5085 | train 14.1s
+Epoch 127 loss 0.5053 | train 14.1s
+Epoch 128 loss 0.5043 | train 14.2s
+Epoch 129 loss 0.5057 | train 14.2s
+Epoch 130 loss 0.5052 | train 14.1s | Acc 98.10% | infer 56.2s
+Epoch 131 loss 0.5174 | train 14.1s
+Epoch 132 loss 0.5228 | train 14.2s
+Epoch 133 loss 0.5072 | train 14.2s
+Epoch 134 loss 0.5111 | train 14.1s
+Epoch 135 loss 0.5262 | train 14.1s | Acc 98.05% | infer 55.9s
+Epoch 136 loss 0.5123 | train 14.2s
+Epoch 137 loss 0.5098 | train 14.1s
+Epoch 138 loss 0.5031 | train 14.1s
+Epoch 139 loss 0.5047 | train 14.1s
+Epoch 140 loss 0.5027 | train 14.1s | Acc 98.24% | infer 56.2s
+Epoch 141 loss 0.4989 | train 14.2s
+Epoch 142 loss 0.5064 | train 14.1s
+Epoch 143 loss 0.5028 | train 14.2s
+Epoch 144 loss 0.5106 | train 14.1s
+Epoch 145 loss 0.5099 | train 14.1s | Acc 98.34% | infer 56.2s
+Epoch 146 loss 0.5041 | train 14.1s
+Epoch 147 loss 0.5006 | train 14.1s
+Epoch 148 loss 0.5001 | train 14.1s
+Epoch 149 loss 0.5084 | train 14.1s
+Epoch 150 loss 0.5074 | train 14.1s | Acc 98.28% | infer 56.0s
+Epoch 151 loss 0.5051 | train 14.2s
+Epoch 152 loss 0.4993 | train 14.1s
+Epoch 153 loss 0.4980 | train 14.2s
+Epoch 154 loss 0.4988 | train 14.1s
+Epoch 155 loss 0.5011 | train 14.1s | Acc 98.36% | infer 56.0s
+Epoch 156 loss 0.5301 | train 14.1s
+Epoch 157 loss 0.5134 | train 14.1s
+Epoch 158 loss 0.5128 | train 14.1s
+Epoch 159 loss 0.5120 | train 14.1s
+Epoch 160 loss 0.5061 | train 14.1s | Acc 98.05% | infer 56.2s
+Epoch 161 loss 0.5030 | train 14.1s
+Epoch 162 loss 0.4994 | train 14.1s
+Epoch 163 loss 0.4988 | train 14.1s
+Epoch 164 loss 0.5107 | train 14.2s
+Epoch 165 loss 0.5049 | train 14.1s | Acc 98.43% | infer 56.2s
+Epoch 166 loss 0.5053 | train 14.1s
+Epoch 167 loss 0.5051 | train 14.1s
+Epoch 168 loss 0.5060 | train 14.1s
+Epoch 169 loss 0.5007 | train 14.1s
+Epoch 170 loss 0.5020 | train 14.2s | Acc 98.30% | infer 56.0s
+Epoch 171 loss 0.4988 | train 14.1s
+Epoch 172 loss 0.4993 | train 14.1s
+Epoch 173 loss 0.5074 | train 14.2s
+Epoch 174 loss 0.5260 | train 14.3s
+Epoch 175 loss 0.6019 | train 14.1s | Acc 51.23% | infer 56.2s
+Epoch 176 loss 0.8849 | train 14.1s
+Epoch 177 loss 0.6998 | train 14.1s
+Epoch 178 loss 0.6386 | train 14.1s
+Epoch 179 loss 0.6190 | train 14.1s
+Epoch 180 loss 0.5941 | train 14.2s | Acc 97.11% | infer 56.2s
+Epoch 181 loss 0.5832 | train 14.1s
+Epoch 182 loss 0.5742 | train 14.1s
+Epoch 183 loss 0.5550 | train 14.1s
+Epoch 184 loss 0.5514 | train 14.2s
+Epoch 185 loss 0.5772 | train 14.2s | Acc 98.15% | infer 56.2s
+Epoch 186 loss 0.5546 | train 14.1s
+Epoch 187 loss 0.5386 | train 14.1s
+Epoch 188 loss 0.5315 | train 14.1s
+Epoch 189 loss 0.5273 | train 14.1s
+Epoch 190 loss 0.5142 | train 14.1s | Acc 98.65% | infer 55.9s
+Epoch 191 loss 0.5163 | train 14.1s
+Epoch 192 loss 0.5203 | train 14.1s
+Epoch 193 loss 0.5310 | train 14.2s
+Epoch 194 loss 0.5272 | train 14.1s
+Epoch 195 loss 0.5305 | train 14.1s | Acc 98.46% | infer 55.9s
+Epoch 196 loss 0.5289 | train 14.1s
+Epoch 197 loss 0.5255 | train 14.1s
+Epoch 198 loss 0.5208 | train 14.2s
+Epoch 199 loss 0.5169 | train 14.2s
+Epoch 200 loss 0.5170 | train 14.1s | Acc 98.52% | infer 56.2s
+
+Final Heun multi-T eval:
+Heun T=  2 acc 3.9600% | infer 3.1s
+Heun T=  5 acc 1.9600% | infer 7.3s
+Heun T= 10 acc 1.1200% | infer 14.2s
+Heun T= 20 acc 5.4700% | infer 28.2s
+Heun T= 30 acc 98.4200% | infer 42.1s
+Heun T= 40 acc 98.5400% | infer 56.0s
+Heun T= 50 acc 98.5000% | infer 69.8s
+Heun T= 60 acc 98.4700% | infer 83.8s
+Heun T= 70 acc 98.5200% | infer 97.6s
+Heun T= 80 acc 98.5000% | infer 111.6s
+Heun T= 90 acc 98.4900% | infer 125.5s
+Heun T=100 acc 98.5000% | infer 139.4s
+Heun T=200 acc 98.4800% | infer 278.4s
+
+Final Euler multi-T eval:
+Euler T=  2 acc 98.5700% | infer 1.7s
+Euler T=  5 acc 98.6200% | infer 3.8s
+Euler T= 10 acc 98.0400% | infer 7.3s
+Euler T= 20 acc 98.5000% | infer 14.2s
+Euler T= 30 acc 98.5600% | infer 21.2s
+Euler T= 40 acc 98.5000% | infer 28.2s
+Euler T= 50 acc 98.4900% | infer 35.1s
+Euler T= 60 acc 98.5100% | infer 42.0s
+Euler T= 70 acc 98.5200% | infer 49.0s
+Euler T= 80 acc 98.5100% | infer 55.9s
+Euler T= 90 acc 98.4900% | infer 62.9s
+Euler T=100 acc 98.5300% | infer 69.9s
+Euler T=200 acc 98.5700% | infer 139.3s
 ```
