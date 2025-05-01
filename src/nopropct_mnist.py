@@ -12,7 +12,7 @@ import torchvision.transforms as transforms
 import torchvision.models as models
 
 # ----------------------------------------------------------------------------
-# Sinusoidal embedding for scalar t ∈ [0,1]
+# Sinusoidal embedding for scalar t in [0,1]
 # ----------------------------------------------------------------------------
 def sinusoidal_embedding(t: torch.Tensor, dim: int) -> torch.Tensor:
     half = dim // 2
