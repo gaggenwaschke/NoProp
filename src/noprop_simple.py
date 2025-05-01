@@ -337,5 +337,5 @@ if __name__ == '__main__':
     parser.add_argument('--backbones', nargs='+', default=['resnet18','resnet50','resnet152'])
     args = parser.parse_args()
 
-    for bb in args.backbones:
-        train_and_eval(bb, args.dataset, args.data_root)
+    for backbone in args.backbones:
+        train_and_eval(backbone, args.dataset, args.data_root)
