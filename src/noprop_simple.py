@@ -130,8 +130,8 @@ class NoPropCT(nn.Module):
         self.backbone = ResNetBackbone(backbone, embed_dim)
         self.z_enc = ZEncoder(num_classes, embed_dim)
         self.t_enc = TEncoder(time_emb_dim, embed_dim)
-        self.fuse = FuseHead(embed_dim, mid_dim=128, num_classes=num_classes)
-        self.noise = NoiseSchedule(hidden_dim=64)
+        self.fuse = FuseHead(embed_dim, mid_dim=256, num_classes=num_classes)
+        self.noise = NoiseSchedule(hidden_dim=128)
 
     def alpha_bar(self, t: torch.Tensor) -> torch.Tensor:
         return self.noise.alpha_bar(t)
@@ -220,7 +220,7 @@ def run_noprop_ct_inference_heun(model: nn.Module, x: torch.Tensor, T_steps: int
 # ----------------------------------------------------------------------------
 # train & eval loop per backbone + dataset
 # ----------------------------------------------------------------------------
-def train_and_eval(backbone: str, dataset: str, data_root: str):
+def train_and_eval(backbone: str, time_emb_dim: int, embed_dim: int, dataset: str, data_root: str, epoches: int, ):
     # dataset‐specific setup
     if dataset == 'mnist':
         ds_train = torchvision.datasets.MNIST(data_root, train=True,  download=True,
@@ -278,17 +278,17 @@ def train_and_eval(backbone: str, dataset: str, data_root: str):
     tr_loader = DataLoader(ds_train, batch_size=2048, shuffle=True,  num_workers=8, drop_last=True)
     te_loader = DataLoader(ds_test,  batch_size=2048, shuffle=False, num_workers=8)
 
-    model = NoPropCT(backbone, num_classes=num_classes, time_emb_dim=64, embed_dim=256).to(device)
+    model = NoPropCT(backbone, num_classes=num_classes, time_emb_dim=int(time_emb_dim), embed_dim=int(embed_dim) ).to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-3)
 
-    for ep in range(1, 2001):
+    for ep in range(1, int(epoches) + 1):
         t0, total_loss = time.time(), 0.0
         model.train()
         for x,y in tr_loader:
             x,y = x.to(device), y.to(device)
             total_loss += train_step(model, x, y, optimizer, device) * x.size(0)
         avg_loss = total_loss / len(ds_train)
-        print(f"Epoch {ep:02d} loss {avg_loss:.4f} | train {time.time()-t0:.1f}s", end='')
+        print(f"Epoch {ep:03d} loss {avg_loss:>8.4f} | train {time.time()-t0:>3.1f}s", end='')
 
         if ep % 10 == 0:
             # quick eval
@@ -300,7 +300,7 @@ def train_and_eval(backbone: str, dataset: str, data_root: str):
                 preds = run_noprop_ct_inference_heun(model, x, T_steps=40)
                 corr += (preds == y).sum().item()
                 tot  += y.size(0)
-            print(f" | Acc {100*corr/tot:.2f}% | infer {time.time()-eval_t0:.1f}s", end='')
+            print(f" | Acc {100*corr/tot:4.2f}% | infer {time.time()-eval_t0:>3.1f}s", end='')
         print()
 
     # final multi-T Heun
@@ -312,7 +312,7 @@ def train_and_eval(backbone: str, dataset: str, data_root: str):
             x, y = x.to(device), y.to(device)
             preds = run_noprop_ct_inference_heun(model, x, T)
             corr += (preds == y).sum().item(); tot += y.size(0)
-        print(f"Heun T={T:3d} acc {corr/tot:.4%} | infer {time.time()-ti:.1f}s")
+        print(f"Heun T={T:>3d} acc {100*corr/tot:4.2f}% | infer {time.time()-ti:3.1f}s")
 
     # final multi-T Euler
     print("\nFinal Euler multi-T eval:")
@@ -323,7 +323,7 @@ def train_and_eval(backbone: str, dataset: str, data_root: str):
             x, y = x.to(device), y.to(device)
             preds = run_noprop_ct_inference(model, x, T)
             corr += (preds == y).sum().item(); tot += y.size(0)
-        print(f"Euler T={T:3d} acc {corr/tot:.4%} | infer {time.time()-ti:.1f}s")
+        print(f"Euler T={T:>3d} acc {100*corr/tot:4.2f}% | infer {time.time()-ti:3.1f}s")
 
 
     # cleanup
@@ -335,7 +335,10 @@ if __name__ == '__main__':
     parser.add_argument('--dataset', choices=['mnist','cifar10','cifar100'], required=True)
     parser.add_argument('--data-root', default='./data')
     parser.add_argument('--backbones', nargs='+', default=['resnet18','resnet50','resnet152'])
+    parser.add_argument('--time_emb_dim', default=128 )
+    parser.add_argument('--embed_dim', default=512 )    
+    parser.add_argument('--epoches', default=2000 )
     args = parser.parse_args()
 
     for backbone in args.backbones:
-        train_and_eval(backbone, args.dataset, args.data_root)
+        train_and_eval(backbone, args.time_emb_dim, args.embed_dim, args.dataset, args.data_root,  args.epoches)
