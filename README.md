@@ -47,8 +47,7 @@ for more detail, check the original paper [arXiv:2503.24322v1](https://arxiv.org
   title={NoProp: Community Implementation Code},
   author={Ryu, Hyungon},
   year={2025},
-  howpublished={\url{https://github.com/yhgon/NoProp}},
-  note={Commit XYZ}
+  howpublished={\url{https://github.com/yhgon/NoProp}} 
 }
 ```
 
